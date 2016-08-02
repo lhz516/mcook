@@ -1,0 +1,20 @@
+{
+  "name": "mcook",
+  "version": "0.0.1",
+  "description": "Generate meteor project source code following meteor guide",
+  "main": "./bin/mcook",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "mcook": "./bin/mcook"
+  },
+  "keywords": [
+    "meteor", "generate"
+  ],
+  "author": "Hanz Luo",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}

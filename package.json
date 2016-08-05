@@ -1,6 +1,6 @@
 {
   "name": "mcook",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generate meteor project source code following meteor guide",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +12,10 @@
     "meteor", "generate", "create"
   ],
   "author": "Hanz Luo",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/lhz516/mcook.git"
+  },
   "license": "MIT",
   "dependencies": {
     "commander": "^2.9.0",

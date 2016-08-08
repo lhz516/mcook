@@ -11,7 +11,7 @@ program
   .command('init [config]')
   .description('initialize a project')
   .action((file) => {
-    let configFile = 'mcook.json';
+    let configFile = 'mcook.js';
     if (file) {
       configFile = file;
     }
@@ -23,9 +23,14 @@ program
         console.log('Read configuration file success');
         let obj;
         try {
-          obj = JSON.parse(data);
+          const vm = require('vm');
+          let sandbox  = { module };
+          let script = new vm.Script(data);
+          const context = new vm.createContext(sandbox);
+          script.runInContext(context);
+          obj = sandbox.module.exports;
         } catch (err) {
-          console.log('Json parsing failed, please check the file format');
+          console.log(`[Error] Json parse failed: ${err.message}`);
         }
         if (obj) {
           const Mcook = require('../lib');

@@ -62,16 +62,26 @@ module.exports = {
 
               ]
             },
-            // childRoutes: [
-            //   {
-            //     isIndex: true,
-            //     component: 'PostIndex'
-            //   },
-            //   {
-            //     path: '/posts/:id',
-            //     component: 'Post'
-            //   }
-            // ],
+            childRoutes: [
+              {
+                name: 'postsIndex',
+                isIndex: true,
+                component: 'PostsIndex'
+              },
+              {
+                name: 'postDetail',
+                path: '/post/:id',
+                component: 'Post',
+                // childRoutes: [
+                //   {
+                //     name: 'postEdit',
+                //     path: '/post/:id/edit',
+                //     component: 'PostEdit'
+                //   }
+                // ],
+                //wrapChildRoutes: true
+              }
+            ],
             wrapChildRoutes: true
           }
         ]

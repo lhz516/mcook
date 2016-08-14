@@ -1,6 +1,6 @@
 {
   "name": "mcook",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Generate meteor project source code following meteor guide",
   "engines": {
     "node": ">=4.0.0"
